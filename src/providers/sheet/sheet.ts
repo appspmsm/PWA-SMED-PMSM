@@ -80,6 +80,7 @@ export class SheetProvider {
       itemProgramacao.horaInicio = element.gsx$horainicio.$t;
       itemProgramacao.horaFim = element.gsx$horafim.$t;
       itemProgramacao.local = element.gsx$local.$t;
+      itemProgramacao.imagem = element.gsx$imagem.$t;
       itemProgramacao.favorito = false;
       itemProgramacao.descricoes = [];
       let descricaoElement = element;
@@ -167,5 +168,6 @@ interface ItemProgramacao {
   horaInicio: string,
   horaFim: string,
   local: string,
+  imagem: string,
   favorito: boolean
 }

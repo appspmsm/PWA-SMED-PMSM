@@ -28,6 +28,7 @@
     <h4>Data: {{detalhes.data}}</h4>
     <h4>Horário: {{detalhes.horaInicio}} - {{detalhes.horaFim}}</h4>
     <h4 *ngIf="detalhes.chair && detalhes.chair !== ''">Chair: {{detalhes.chair}}</h4>
+    <img *ngIf="detalhes.imagem !== ''" [src]="detalhes.imagem">
     <ion-card *ngFor='let descricao of detalhes.descricoes'>
       <ion-card-content>
         <span>
