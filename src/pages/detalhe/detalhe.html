@@ -24,9 +24,9 @@
 <ion-content padding>
   <div>
     <h3>{{detalhes.nome}}</h3>  
-    <h4>Local: {{detalhes.local}}</h4>
-    <h4>Data: {{detalhes.data}}</h4>
-    <h4>Horário: {{detalhes.horaInicio}} - {{detalhes.horaFim}}</h4>
+    <h4 *ngIf="detalhes.local !== ''">Local: {{detalhes.local}}</h4>
+    <h4 *ngIf="detalhes.data !== ''">Data: {{detalhes.data}}</h4>
+    <h4 *ngIf="detalhes.horaInicio !== ''">Horário: {{detalhes.horaInicio}} <span *ngIf="detalhes.horaFim !== ''">- {{detalhes.horaFim}}</span></h4>
     <h4 *ngIf="detalhes.chair && detalhes.chair !== ''">Chair: {{detalhes.chair}}</h4>
     <img *ngIf="detalhes.imagem !== ''" [src]="detalhes.imagem">
     <ion-card *ngFor='let descricao of detalhes.descricoes'>

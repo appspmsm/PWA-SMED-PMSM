@@ -18,7 +18,7 @@
     <div *ngIf="favoritosList?.length > 0; else empty">
       <button ion-item *ngFor="let item of favoritosList" (click)="goToDetalhes(item)">
           <h2>{{item.nome}}</h2>
-          <p>{{item.data}} &mdash; {{item.horaInicio}} - {{item.horaFim}}
+          <p><span *ngIf="item.data  != ''">{{item.data}}</span><span *ngIf="item.data != '' && item.horaInicio != ''"> &mdash; </span>{{item.horaInicio}}<span *ngIf="item.horaFim != ''"> - {{item.horaFim}}</span>
             <span *ngIf='item.local != ""'>
               &mdash; {{item.local}}</span>
           </p>
