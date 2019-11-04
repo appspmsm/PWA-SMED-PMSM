@@ -102,7 +102,7 @@ export class ProgramacaoPage {
     this.selectDataOptions = [];
     this.selectLocalOptions = [];
     this.listaProgramacao.forEach(element => {
-      if (this.selectDataOptions.indexOf(element.data) == -1) {
+      if (this.selectDataOptions.indexOf(element.data) == -1 && element.data.length > 1) {
         this.selectDataOptions.push(element.data);
       }
       if (this.selectLocalOptions.indexOf(element.local) == -1 && element.local != '') {
